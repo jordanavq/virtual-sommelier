@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 
 function App() {
-  return <Header />;
+  return <Header active={true} />;
 }
 
 export default App;

@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <nav>
-      <Link to="/">
+      <Link exact to="/">
         <img src="../images/logo.jpeg" alt="logo" />
       </Link>
-      <Link to="/countries">Countries</Link>
-      <Link to="grapes">Grapes</Link>
+      {props.active ? (
+        <>
+          <Link to="/countries">Countries</Link>
+          <Link to="/grapes">Grapes</Link>
+        </>
+      ) : null}
     </nav>
   );
 };
