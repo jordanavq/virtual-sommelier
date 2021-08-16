@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
-import logo from "../images/logo.jpeg";
+import logo from "../images/logo4.png";
 
 const Header = (props) => {
   return (
@@ -19,11 +19,11 @@ const Header = (props) => {
       </Link>
       {props.active ? (
         <>
-          <Link to="/grapes" style={{ marginLeft: "220px" }}>
+          <Link to="/grapes" style={{ marginLeft: "200px" }}>
             Grapes
           </Link>
 
-          <Link to="/countries" style={{ marginRight: "200px" }}>
+          <Link to="/countries" style={{ marginRight: "210px" }}>
             Countries
           </Link>
         </>
