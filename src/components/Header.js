@@ -6,18 +6,25 @@ const Header = (props) => {
   return (
     <nav
       style={{ backgroundColor: "#911d47" }}
-      className="navbar align-items-center fs-5 text fw-bold "
+      className="navbar align-items-center   fs-5 text fw-bold "
     >
       <Link exact to="/">
-        <img className="logo-navbar" src="../images/logo.jpeg" alt="logo" />
+        <img
+          className="logo-navbar"
+          src="../images/logo.jpeg"
+          alt="logo"
+          style={{ marginLeft: "20px" }}
+        />
       </Link>
       {props.active ? (
         <>
-          <ul className="nav justify-content-center">
-            <Link to="/countries">Countries</Link>
+          <Link to="/countries" style={{ marginLeft: "220px" }}>
+            Countries
+          </Link>
 
-            <Link to="/grapes">Grapes</Link>
-          </ul>
+          <Link to="/grapes" style={{ marginRight: "200px" }}>
+            Grapes
+          </Link>
         </>
       ) : null}
     </nav>
