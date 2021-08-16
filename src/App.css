@@ -10,3 +10,11 @@ nav a {
 nav a:hover {
   color: #d4cdc9;
 }
+
+.fa-icon-container a {
+  text-decoration: none;
+}
+
+.fa-icon-container a:hover {
+  color: black;
+}
