@@ -1,0 +1,11 @@
+.GrapesCards img{
+    width: 70px;
+}
+.GrapesCards{
+    border: 1px solid #911d47;
+    border-radius: 3px;
+    width: 150px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
