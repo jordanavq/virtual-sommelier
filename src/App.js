@@ -4,8 +4,11 @@ import Header from "./components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer/Footer";
 import api from "./api/apiVinhos";
+import Home from "./components/Home/Home";
+import Countries from "./components/Countries/Countries";
+import { Switch, Route } from "react-router-dom";
 
-class App extends Component() {
+class App extends Component {
   state = {
     database: [],
   };
@@ -20,10 +23,14 @@ class App extends Component() {
 
   render() {
     return (
-      <>
+      <div>
         <Header active={true} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/countries" component={Countries} />
+        </Switch>
         <Footer />;
-      </>
+      </div>
     );
   }
 }
