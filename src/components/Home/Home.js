@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import grapesimage from "../../images/grapesImage.jpg";
 import regionimage from "../../images/regionImage.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -10,11 +11,13 @@ const Home = () => {
       <div className="row row-cols-1 row-cols-md-2 g-4">
         <div className="col">
           <div className="card">
-            <img
-              src={grapesimage}
-              className="card-img-top"
-              alt="grapes image"
-            />
+            <Link to="/grapes">
+              <img
+                src={grapesimage}
+                className="card-img-top"
+                alt="grapes image"
+              />
+            </Link>
             <div className="card-body">
               <h5 className="card-title">Grapes</h5>
               <p className="card-text">Find wine by your favorite grape</p>
@@ -24,11 +27,13 @@ const Home = () => {
 
         <div className="col">
           <div className="card">
-            <img
-              src={regionimage}
-              className="card-img-top"
-              alt="winery image"
-            />
+            <Link to="/conutries">
+              <img
+                src={regionimage}
+                className="card-img-top"
+                alt="winery image"
+              />
+            </Link>
             <div className="card-body">
               <h5 className="card-title">Countries</h5>
               <p className="card-text"></p>
