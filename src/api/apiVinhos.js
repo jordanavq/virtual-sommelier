@@ -3,11 +3,11 @@ import axios from "axios";
 class wineApi {
   constructor() {
     this.api = axios.create({
-      baseURL: "http://localhost:8000",
+      baseURL: "https://ironrest.herokuapp.com",
     });
   }
-  getBeers = () => {
-    return this.api.get("/virtualsommelier");
+  getWine = () => {
+    return this.api.get("/virtual-sommelier");
   };
 }
 

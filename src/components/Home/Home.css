@@ -1,0 +1,12 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-weight: 600;
+  color: #911d47;
+}
+
+img {
+  height: 300px;
+  width: auto;
+}
