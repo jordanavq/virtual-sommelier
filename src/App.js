@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./components/Footer/Footer";
 import api from "./api/apiVinhos";
 
-class App extends Component() {
+class App extends Component {
   state = {
     database: [],
   };
