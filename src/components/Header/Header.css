@@ -1,0 +1,12 @@
+nav img {
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #d4cdc9;
+}
