@@ -7,7 +7,6 @@
 }
 
 .footer {
-  position: absolute;
   width: 100%;
   bottom: 0;
 }
@@ -18,4 +17,8 @@
 
 .developed {
   margin-right: 10px;
+}
+
+.content {
+  overflow: hidden;
 }

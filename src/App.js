@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 import Footer from "./components/Footer/Footer";
-import api from "./api/apiVinhos";
 import Home from "./components/Home/Home";
 import Countries from "./components/Countries/Countries";
+import Grapes from "./components/Grapes/Grapes";
+import GrapesCard from "./components/Grapes/GrapesCard";
 import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -13,13 +15,15 @@ class App extends Component {
     database: [],
   };
 
-  coponentdidmount() {
-    api.wineApi().then((response) =>
-      this.setState({
-        database: response.data,
-      })
-    );
-  }
+  componentDidMount = () => {
+    axios
+      .get("https://ironrest.herokuapp.com/virtual-sommelier")
+      .then((result) => {
+        this.setState({
+          database: result.data,
+        });
+      });
+  };
 
   render() {
     return (
@@ -28,7 +32,9 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/countries" component={Countries} />
+          <Route path="/grapes" component={Grapes} />
         </Switch>
+        <GrapesCard />
         <Footer />;
       </div>
     );
