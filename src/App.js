@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./App.css";
-import Header from "./components/Header/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import { Switch, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Countries from "./components/Countries/Countries";
 import Grapes from "./components/Grapes/Grapes";
-import GrapesCard from "./components/Grapes/GrapesCard";
-import { Switch, Route } from "react-router-dom";
+import WineList from "./components/WineList/WineList";
 
 class App extends Component {
   state = {
@@ -28,13 +28,18 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header active={true} />
+        <Header />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route
+            path="/wines"
+            render={(props) => (
+              <WineList {...props} wines={this.state.database} />
+            )}
+          />
           <Route path="/countries" component={Countries} />
           <Route path="/grapes" component={Grapes} />
         </Switch>
-        <GrapesCard />
         <Footer />;
       </div>
     );

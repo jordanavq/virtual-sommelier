@@ -1,4 +1,4 @@
-import "./GrapesCards.css";
+import "./GrapesCard.css";
 import React from "react";
 const GrapesCard = (props) => {
   return (
@@ -12,7 +12,7 @@ const GrapesCard = (props) => {
       <h2>{props["alcohol-content"]}</h2>
       <h2>{props.rate}</h2>
       <h2>{props.parings}</h2>
-      <bottom>Add to favorites wine</bottom>
+      <button>Add to favorites wine</button>
     </div>
   );
 };
