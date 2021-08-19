@@ -7,9 +7,9 @@
 }
 
 .footer {
-  position: absolute;
-  width: 100%;
+  width: 100vw;
   bottom: 0;
+  position: fixed;
 }
 
 .name-container {
@@ -18,4 +18,8 @@
 
 .developed {
   margin-right: 10px;
+}
+
+.content {
+  overflow: hidden;
 }
