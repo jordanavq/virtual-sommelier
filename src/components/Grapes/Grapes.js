@@ -1,12 +1,10 @@
 import React from "react";
-import "./Grapes.css"
+import "./Grapes.css";
 
 const Grapes = () => {
   return (
-      <div>
-          <h1>Search by Grapes</h1>
-      </div>,
     <div>
+      <h1>Search by Grapes</h1>
       <bottom>Chardonnay</bottom>
       <bottom>Sauvignon Blanc</bottom>
       <bottom>Malbec</bottom>
@@ -16,7 +14,6 @@ const Grapes = () => {
       <bottom>Shiraz</bottom>
       <bottom>Merlot</bottom>
       <bottom>Pinot Noir</bottom>
-
     </div>
   );
 };

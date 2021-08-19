@@ -10,3 +10,9 @@ nav a {
 nav a:hover {
   color: #d4cdc9;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

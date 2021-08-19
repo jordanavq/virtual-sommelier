@@ -14,20 +14,18 @@ const Header = (props) => {
           className="logo-navbar"
           src={logo}
           alt="logo"
-          style={{ marginLeft: "20px" }}
+          style={{ marginLeft: "10px" }}
         />
       </Link>
-      {props.active ? (
-        <>
-          <Link to="/grapes" style={{ marginLeft: "200px" }}>
-            Grapes
-          </Link>
 
-          <Link to="/countries" style={{ marginRight: "210px" }}>
-            Countries
-          </Link>
-        </>
-      ) : null}
+      <>
+        <Link to="/wines">Wines</Link>
+        <Link to="/grapes">Grapes</Link>
+
+        <Link to="/countries" style={{ marginRight: "210px" }}>
+          Countries
+        </Link>
+      </>
     </nav>
   );
 };
