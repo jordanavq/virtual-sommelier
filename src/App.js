@@ -13,6 +13,8 @@ import WineList from "./components/WineList/WineList";
 class App extends Component {
   state = {
     database: [],
+    countries: [],
+    grapes: [],
   };
 
   componentDidMount = () => {
@@ -21,6 +23,8 @@ class App extends Component {
       .then((result) => {
         this.setState({
           database: result.data,
+          countries: result.data.map((wine) => wine.region),
+          grapes: result.data.map((allWine) => allWine.grape),
         });
       });
   };
@@ -37,8 +41,16 @@ class App extends Component {
               <WineList {...props} wines={this.state.database} />
             )}
           />
-          <Route path="/countries" component={Countries} />
-          <Route path="/grapes" component={Grapes} />
+          <Route
+            path="/countries"
+            render={(props) => (
+              <Countries {...props} countries={this.state.countries} />
+            )}
+          />
+          <Route
+            path="/grapes"
+            render={(props) => <Grapes {...props} grapes={this.state.grapes} />}
+          />
         </Switch>
         <Footer />;
       </div>
