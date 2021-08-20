@@ -11,7 +11,6 @@ const GrapesCard = (props) => {
       <h2>{props.year}</h2>
       <h2>{props.grape}</h2>
       <h2>{props.region}</h2>
-
       <h2>{props["alcohol-content"]}</h2>
       <h2>{props.rate}</h2>
       <h2>{props.parings}</h2>

@@ -1,19 +1,23 @@
 import React from "react";
 import "./Grapes.css";
+import { NavLink } from "react-router-dom";
 
-const Grapes = () => {
+const Grapes = ({ grapes }) => {
+  const grapesList = [...new Set(grapes)];
+  console.log(grapesList);
+
   return (
     <div>
       <h1>Search by Grapes</h1>
-      <bottom>Chardonnay</bottom>
-      <bottom>Sauvignon Blanc</bottom>
-      <bottom>Malbec</bottom>
-      <bottom>Cabernet Sauvignon</bottom>
-      <bottom>Primitivo</bottom>
-      <bottom>Tempranillo</bottom>
-      <bottom>Shiraz</bottom>
-      <bottom>Merlot</bottom>
-      <bottom>Pinot Noir</bottom>
+      <ul className="list-group">
+        {grapesList.map(([grape]) => {
+          return (
+            <NavLink to={`/grapes/:${grape}`}>
+              <li>{grape}</li>
+            </NavLink>
+          );
+        })}
+      </ul>
     </div>
   );
 };
