@@ -10,7 +10,7 @@ const Grapes = ({ grapes }) => {
     <div>
       <h1>Search by Grapes</h1>
       <ul className="list-group">
-        {grapesList.map(([grape]) => {
+        {grapesList.map((grape) => {
           return (
             <NavLink to={`/grapes/:${grape}`}>
               <li>{grape}</li>

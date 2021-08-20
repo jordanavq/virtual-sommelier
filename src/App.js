@@ -24,7 +24,7 @@ class App extends Component {
         this.setState({
           database: result.data,
           countries: result.data.map((wine) => wine.region),
-          grapes: result.data.map((allWine) => allWine.grape),
+          grapes: result.data.map((allWine) => allWine.grape.join()),
         });
       });
   };
