@@ -12,11 +12,7 @@ const Home = () => {
         <div className="col">
           <div className="card">
             <Link to="/grapes">
-              <img
-                src={grapesimage}
-                className="card-img-top"
-                alt="grapes image"
-              />
+              <img src={grapesimage} className="card-img-top" alt="grapes" />
             </Link>
             <div className="card-body">
               <h5 className="card-title">Grapes</h5>
@@ -27,16 +23,12 @@ const Home = () => {
 
         <div className="col">
           <div className="card">
-            <Link to="/conutries">
-              <img
-                src={regionimage}
-                className="card-img-top"
-                alt="winery image"
-              />
+            <Link to="/countries">
+              <img src={regionimage} className="card-img-top" alt="winery" />
             </Link>
             <div className="card-body">
               <h5 className="card-title">Countries</h5>
-              <p className="card-text"></p>
+              <p className="card-text">Find wine from your favorite country</p>
             </div>
           </div>
         </div>

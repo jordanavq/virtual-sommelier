@@ -8,51 +8,51 @@ const Countries = () => {
       <ul className="d-flex justify-content-around">
         <li>
           <button type="button" className="btn btn-outline-danger">
-            Cabernet Sauvignon
+            Argentina
           </button>
         </li>
         <li>
           <button type="button" className="btn btn-outline-danger">
-            Chardonnay
+            Australia
           </button>
         </li>
         <li>
           <button type="button" className="btn btn-outline-danger">
-            Malbec
-          </button>
-        </li>
-      </ul>
-      <ul className="d-flex justify-content-around">
-        <li>
-          <button type="button" className="btn btn-outline-danger">
-            Merlot
-          </button>
-        </li>
-        <li>
-          <button type="button" className="btn btn-outline-danger">
-            Primitivo
-          </button>
-        </li>
-        <li>
-          <button type="button" className="btn btn-outline-danger">
-            Pinot Noir
+            Brazil
           </button>
         </li>
       </ul>
       <ul className="d-flex justify-content-around">
         <li>
           <button type="button" className="btn btn-outline-danger">
-            Sauvignon Blanc
+            Chile
           </button>
         </li>
         <li>
           <button type="button" className="btn btn-outline-danger">
-            Shiraz
+            France
           </button>
         </li>
         <li>
           <button type="button" className="btn btn-outline-danger">
-            Tempranillo
+            Italy
+          </button>
+        </li>
+      </ul>
+      <ul className="d-flex justify-content-around">
+        <li>
+          <button type="button" className="btn btn-outline-danger">
+            Portugal
+          </button>
+        </li>
+        <li>
+          <button type="button" className="btn btn-outline-danger">
+            Spain
+          </button>
+        </li>
+        <li>
+          <button type="button" className="btn btn-outline-danger">
+            South Africa
           </button>
         </li>
       </ul>
