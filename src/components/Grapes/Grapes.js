@@ -12,7 +12,7 @@ const Grapes = ({ grapes }) => {
       <ul className="list-group">
         {grapesList.map((grape) => {
           return (
-            <NavLink to={`/grapes/:${grape}`}>
+            <NavLink to={`/grapes/${grape}`}>
               <li>{grape}</li>
             </NavLink>
           );

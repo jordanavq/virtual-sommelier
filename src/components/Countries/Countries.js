@@ -12,7 +12,7 @@ const Countries = ({ countries }) => {
       <ul className="list-group">
         {countriesList.map((country) => {
           return (
-            <NavLink to={`/countries/:${country}`}>
+            <NavLink to={`/countries/${country}`}>
               <li>{country}</li>
             </NavLink>
           );
