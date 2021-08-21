@@ -24,7 +24,7 @@ class App extends Component {
         this.setState({
           database: result.data,
           countries: result.data.map((wine) => wine.region),
-          grapes: result.data.map((allWine) => allWine.grape.join()),
+          grapes: result.data.map((allWine) => allWine.grape),
         });
       });
   };
@@ -42,15 +42,34 @@ class App extends Component {
             )}
           />
           <Route
+            exact
             path="/countries"
             render={(props) => (
               <Countries {...props} countries={this.state.countries} />
             )}
           />
           <Route
+            path="/countries/:name"
+            render={(props) => <h1>{props.match.params.name}</h1>}
+          />
+          <Route
+            exact
             path="/grapes"
             render={(props) => <Grapes {...props} grapes={this.state.grapes} />}
           />
+          <Route
+            path="/grapes/:name"
+            render={(props) => <h1>{props.match.params.name}</h1>}
+          />
+          {/*     <Route
+            path="/grapes/:type"
+            render={(props) => (
+              <>
+                <Grapes {...props} grapes={this.state.grapes} />
+                <h1>{props.match.params.type}</h1>
+              </> 
+            )}
+          / */}
         </Switch>
         <Footer />;
       </div>
