@@ -1,13 +1,17 @@
 form{
+    display: flex;
+  
+  align-items: center;
     border-radius: 10px;
     border:0;
-    width: 400px;
-    margin: 0 10px;
+    padding:0.5%;
+    width: 1000px;
+    margin-left: 510px;
     font-size: 20px;
   
   }
+
   button{
     text-decoration: none;
     text-decoration-color: #911d47;
   }
-  

@@ -1,9 +1,9 @@
 import "./searchBar.css";
 import React, { useState } from "react";
-
+import searchResult from "./searchResult"
 const Search = (props) => {
 
-const[search, setSearch] = useState("")
+const[query, setSearch] = useState("")
 
 
 function handleSearch(event){
@@ -13,7 +13,10 @@ setSearch(event.target.value);
   return (
     <div className="SearchBar">
      <form action="">
-        <input type="text" name="search" id="search" onChange={handleSearch}/>
+        <input type="text" name="query" id="query" onChange={handleSearch}/>
+        <searchResult/>
+
+
         <button type="submit">Search</button>
       </form>
     </div>
