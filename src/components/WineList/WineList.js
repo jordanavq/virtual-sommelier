@@ -5,6 +5,7 @@ class WineList extends Component {
   render() {
     return (
       <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <h1>All Wines</h1>
         {this.props.wines.map((wine) => (
           <GrapesCard {...wine} />
         ))}
