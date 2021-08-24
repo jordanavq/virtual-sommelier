@@ -9,6 +9,7 @@ import Home from "./components/Home/Home";
 import Countries from "./components/Countries/Countries";
 import Grapes from "./components/Grapes/Grapes";
 import WineList from "./components/WineList/WineList";
+import Search from "./components/Search/searchBar"
 import SelectedCountry from "./components/SelectedCountry/SeletectedCountry";
 
 class App extends Component {

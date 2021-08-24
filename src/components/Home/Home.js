@@ -2,12 +2,19 @@ import React from "react";
 import "./Home.css";
 import grapesimage from "../../images/grapesImage.jpg";
 import regionimage from "../../images/regionImage.jpg";
+import Search from "../Search/searchBar"
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
       <h1> Virtual Sommelier</h1>
+      <form action="">
+        <input type="text" name="search" id="search" />
+        <button type="submit">Search</button>
+      </form>
+
+
       <div className="row row-cols-1 row-cols-md-2 g-4">
         <div className="col">
           <div className="card">
