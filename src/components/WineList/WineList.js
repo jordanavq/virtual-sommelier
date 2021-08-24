@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GrapesCard from "../Grapes/GrapesCard";
+import GrapesCard from "../Card/GrapesCard";
 
 class WineList extends Component {
   render() {
