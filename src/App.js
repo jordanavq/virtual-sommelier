@@ -10,6 +10,7 @@ import Countries from "./components/Countries/Countries";
 import Grapes from "./components/Grapes/Grapes";
 import WineList from "./components/WineList/WineList";
 import SelectedCountry from "./components/SelectedCountry/SeletectedCountry";
+import SelectedGrapes from "./components/SelectedGrapes/SelectedGrapes";
 
 class App extends Component {
   state = {
@@ -62,8 +63,14 @@ class App extends Component {
           />
           <Route
             path="/grapes/:name"
-            render={(props) => <h1>{props.match.params.name}</h1>}
+            render={(props) => (
+              <SelectedGrapes {...props} wines={this.state.database} />
+            )}
           />
+          {/* <Route
+            path="/grapes/:name"
+            render={(props) => <h1>{props.match.params.name}</h1>}
+          /> */}
         </Switch>
         <Footer />;
       </div>
