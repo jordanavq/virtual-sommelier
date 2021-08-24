@@ -6,6 +6,7 @@ class SelectedCountry extends Component {
     console.log(this.props);
     return (
       <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <h1>{this.props.match.params.name}</h1>
         {this.props.wines
           .filter((wine) => {
             return wine.region === this.props.match.params.name;
