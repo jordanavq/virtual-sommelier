@@ -67,12 +67,8 @@ class App extends Component {
               <SelectedGrapes {...props} wines={this.state.database} />
             )}
           />
-          {/* <Route
-            path="/grapes/:name"
-            render={(props) => <h1>{props.match.params.name}</h1>}
-          /> */}
         </Switch>
-        <Footer />;
+        <Footer />
       </div>
     );
   }
