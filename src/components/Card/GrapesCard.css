@@ -3,9 +3,28 @@
 }
 .GrapesCards {
   border: 1px solid #911d47;
-  border-radius: 3px;
-  width: 150px;
+  border-radius: 5px;
+  border-width: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: 10px;
+  padding: 10px;
+  color: #2f3133;
+  height: 580px;
+}
+
+h3 {
+  color: #911d47;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
