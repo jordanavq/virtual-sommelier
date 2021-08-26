@@ -4,11 +4,11 @@ The application offers a catalog of wines in which you can view information abou
 
 Click [HERE](http://virtual-sommelier.herokuapp.com/) to see the app!
 
-### `How was it build?`
+### How was it build?
 
 This project is based in React.JS, using an API data thru Axios, as part of Ironhack Web Development bootcamp.
 
-### `Developed by`
+### Developed by
 
 [Jordana Queiroz](https://github.com/jordanavq) and [Victor Campos](https://github.com/VictorCamp-Front)
 
