@@ -17,8 +17,16 @@ class App extends Component {
     database: [],
     countries: [],
     grapes: [],
+    filtered:[],
   };
 
+filterWine = (str)=>{
+const filtered = this.state.database.filter((wine)=> wine.name.includes(str))
+this.setState({
+  filtered,
+})
+
+}
   componentDidMount = () => {
     axios
       .get("https://ironrest.herokuapp.com/virtual-sommelier")
@@ -27,6 +35,8 @@ class App extends Component {
           database: result.data,
           countries: result.data.map((wine) => wine.region),
           grapes: result.data.map((allWine) => allWine.grape),
+          filtered: result.data,
+
         });
       });
   };
@@ -35,6 +45,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <Search filtered={this.filterWine}/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route

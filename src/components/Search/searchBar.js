@@ -1,26 +1,33 @@
 import "./searchBar.css";
-import React, { useState } from "react";
-import searchResult from "./searchResult"
-const Search = (props) => {
-
-const[query, setSearch] = useState("")
+import React, { useState, Component } from "react";
 
 
-function handleSearch(event){
-setSearch(event.target.value);
+class Search extends Component {
+  state = {
+    input:''
+  }
+  handleSearch =(str) =>{
+this.setState({
+  input:str.target.value
+})
+this.props.filtered{this.state.input} /** Essa parte esta travada */
+  }
+  render(){
+    <div>
+      <input
+      type='text'
+      placeholder='search...'
+      value={this.state.input}
+      onChange={this.handleSearch}
 
-}
-  return (
-    <div className="SearchBar">
-     <form action="">
-        <input type="text" name="query" id="query" onChange={handleSearch}/>
-        <searchResult/>
 
-
-        <button type="submit">Search</button>
-      </form>
+      
+      />
     </div>
-  );
-};
 
+
+
+    return
+  }
+}
 export default Search;
