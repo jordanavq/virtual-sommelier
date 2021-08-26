@@ -4,8 +4,6 @@ import grapesImage from "../../images/grapesImage.jpg";
 import regionImage from "../../images/regionImage.jpg";
 import "./CarouselHome.css";
 import { Link } from "react-router-dom";
-import { height } from "dom-helpers";
-/* import Image from "react-bootstrap/Image"; */
 
 const CarouselHome = () => {
   return (
@@ -21,7 +19,7 @@ const CarouselHome = () => {
             />
           </Link>
           <Carousel.Caption>
-            <h3>Grapes</h3>
+            <h3 style={{ color: "#f2f0f0" }}>Grapes</h3>
             <p>Find a wine of your favorite grape</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -35,7 +33,7 @@ const CarouselHome = () => {
             />
           </Link>
           <Carousel.Caption>
-            <h3>Countries</h3>
+            <h3 style={{ color: "#f2f0f0" }}>Countries</h3>
             <p>Find a wine from your favorite country</p>
           </Carousel.Caption>
         </Carousel.Item>
