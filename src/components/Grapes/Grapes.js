@@ -9,15 +9,20 @@ const Grapes = ({ grapes }) => {
   return (
     <div>
       <h1>Search by Grapes</h1>
-      <ul className="list-group">
+      <div className="d-grid gap-3 col-1 mx-auto">
         {grapesList.map((grape) => {
           return (
             <NavLink to={`/grapes/${grape}`}>
-              <li>{grape}</li>
+              <button
+                type="button"
+                className="btn btn-outline-dangerbtn btn-outline-danger"
+              >
+                {grape}
+              </button>
             </NavLink>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -35,39 +35,43 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            path="/wines"
-            render={(props) => (
-              <WineList {...props} wines={this.state.database} />
-            )}
-          />
-          <Route
-            exact
-            path="/countries"
-            render={(props) => (
-              <Countries {...props} countries={this.state.countries} />
-            )}
-          />
-          <Route
-            path="/countries/:name"
-            render={(props) => (
-              <SelectedCountry {...props} wines={this.state.database} />
-            )}
-          />
-          <Route
-            exact
-            path="/grapes"
-            render={(props) => <Grapes {...props} grapes={this.state.grapes} />}
-          />
-          <Route
-            path="/grapes/:name"
-            render={(props) => (
-              <SelectedGrapes {...props} wines={this.state.database} />
-            )}
-          />
-        </Switch>
+        <div className="mainContent">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route
+              path="/wines"
+              render={(props) => (
+                <WineList {...props} wines={this.state.database} />
+              )}
+            />
+            <Route
+              exact
+              path="/countries"
+              render={(props) => (
+                <Countries {...props} countries={this.state.countries} />
+              )}
+            />
+            <Route
+              path="/countries/:name"
+              render={(props) => (
+                <SelectedCountry {...props} wines={this.state.database} />
+              )}
+            />
+            <Route
+              exact
+              path="/grapes"
+              render={(props) => (
+                <Grapes {...props} grapes={this.state.grapes} />
+              )}
+            />
+            <Route
+              path="/grapes/:name"
+              render={(props) => (
+                <SelectedGrapes {...props} wines={this.state.database} />
+              )}
+            />
+          </Switch>
+        </div>
         <Footer />
       </div>
     );

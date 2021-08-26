@@ -5,16 +5,20 @@ class SelectedCountry extends Component {
   render() {
     console.log(this.props);
     return (
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <>
         <h1>{this.props.match.params.name}</h1>
-        {this.props.wines
-          .filter((wine) => {
-            return wine.region === this.props.match.params.name;
-          })
-          .map((wine) => (
-            <GrapesCard {...wine} />
-          ))}
-      </div>
+        <div className="row">
+          {this.props.wines
+            .filter((wine) => {
+              return wine.region === this.props.match.params.name;
+            })
+            .map((wine) => (
+              <div className="col-3">
+                <GrapesCard {...wine} />
+              </div>
+            ))}
+        </div>
+      </>
     );
   }
 }
