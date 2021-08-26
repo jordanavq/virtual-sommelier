@@ -45,7 +45,7 @@ this.setState({
     return (
       <div>
         <Header />
-        <Search filtered={this.filterWine}/>
+        <Search filtered={this.filterWine} filteredWine={this.state.filtered}/>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route
@@ -76,7 +76,9 @@ this.setState({
             path="/grapes/:name"
             render={(props) => <h1>{props.match.params.name}</h1>}
           />
+          
         </Switch>
+        
         <Footer />;
       </div>
     );
