@@ -4,8 +4,6 @@ import grapesImage from "../../images/grapesImage.jpg";
 import regionImage from "../../images/regionImage.jpg";
 import "./CarouselHome.css";
 import { Link } from "react-router-dom";
-import { height } from "dom-helpers";
-/* import Image from "react-bootstrap/Image"; */
 
 const CarouselHome = () => {
   return (
