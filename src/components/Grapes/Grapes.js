@@ -9,13 +9,16 @@ const Grapes = ({ grapes }) => {
   return (
     <div>
       <h1>Search by Grapes</h1>
-      <div className="d-grid gap-3 col-1 mx-auto">
+      <div className="row">
         {grapesList.map((grape) => {
           return (
-            <NavLink to={`/grapes/${grape}`}>
+            <NavLink
+              className="col-4 d-flex justify-content-center text-decoration-none"
+              to={`/grapes/${grape}`}
+            >
               <button
                 type="button"
-                className="btn btn-outline-dangerbtn btn-outline-danger"
+                className="btn btn-outline-danger w-50 my-3"
               >
                 {grape}
               </button>

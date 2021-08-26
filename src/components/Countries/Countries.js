@@ -9,7 +9,7 @@ const Countries = ({ countries }) => {
   return (
     <div>
       <h1>Search by Countries</h1>
-      <ul className="row">
+      <div className="row">
         {countriesList.map((country) => {
           return (
             <NavLink
@@ -25,7 +25,7 @@ const Countries = ({ countries }) => {
             </NavLink>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 };
