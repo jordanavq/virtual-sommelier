@@ -37,7 +37,7 @@ class App extends Component {
           database: result.data,
           countries: result.data.map((wine) => wine.region),
           grapes: result.data.map((allWine) => allWine.grape),
-          filtered: result.data,
+          /* filtered: result.data, */
         });
       });
   };

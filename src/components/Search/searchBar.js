@@ -1,39 +1,39 @@
 import "./searchBar.css";
 import React, { Component } from "react";
-import GrapesCard from "../Card/GrapesCard"
-
+import GrapesCard from "../Card/GrapesCard";
 
 class Search extends Component {
   state = {
-    input: ''
-  }
+    input: "",
+  };
   handleSearch = (str) => {
     this.setState({
-      input: str.target.value
-    })
+      input: str.target.value,
+    });
 
-    this.props.filtered(this.state.input)
+    this.props.filtered(this.state.input);
+  };
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.input !== prevState.input) {
+      this.props.handleSearch(this.state.input);
+    }
   }
   render() {
     return (
       <div>
         <input
-          type='text'
-          placeholder='search...'
+          type="text"
+          placeholder="search..."
           value={this.state.input}
           onChange={this.handleSearch}
-
-
-
         />
-        
-        {this.state.input===''? null:this.props.filteredWine.map((wine)=> <GrapesCard {...wine}/>) }
 
-              </div>
-
-
-    )
-
+        {this.state.input === ""
+          ? null
+          : this.props.filteredWine.map((wine) => <GrapesCard {...wine} />)}
+      </div>
+    );
   }
 }
 export default Search;
