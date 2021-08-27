@@ -9,15 +9,23 @@ const Countries = ({ countries }) => {
   return (
     <div>
       <h1>Search by Countries</h1>
-      <ul className="list-group">
+      <div className="row">
         {countriesList.map((country) => {
           return (
-            <NavLink to={`/countries/${country}`}>
-              <li>{country}</li>
+            <NavLink
+              className="col-4 d-flex justify-content-center text-decoration-none"
+              to={`/countries/${country}`}
+            >
+              <button
+                type="button"
+                className="btn btn-outline-danger w-50 my-3"
+              >
+                {country}
+              </button>
             </NavLink>
           );
         })}
-      </ul>
+      </div>
     </div>
   );
 };

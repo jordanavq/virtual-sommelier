@@ -11,6 +11,7 @@ import Grapes from "./components/Grapes/Grapes";
 import WineList from "./components/WineList/WineList";
 import Search from "./components/Search/searchBar"
 import SelectedCountry from "./components/SelectedCountry/SeletectedCountry";
+import SelectedGrapes from "./components/SelectedGrapes/SelectedGrapes";
 
 class App extends Component {
   state = {
@@ -45,41 +46,47 @@ this.setState({
     return (
       <div>
         <Header />
-        <Search filtered={this.filterWine} filteredWine={this.state.filtered}/>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            path="/wines"
-            render={(props) => (
-              <WineList {...props} wines={this.state.database} />
-            )}
-          />
-          <Route
-            exact
-            path="/countries"
-            render={(props) => (
-              <Countries {...props} countries={this.state.countries} />
-            )}
-          />
-          <Route
-            path="/countries/:name"
-            render={(props) => (
-              <SelectedCountry {...props} wines={this.state.database} />
-            )}
-          />
-          <Route
-            exact
-            path="/grapes"
-            render={(props) => <Grapes {...props} grapes={this.state.grapes} />}
-          />
-          <Route
-            path="/grapes/:name"
-            render={(props) => <h1>{props.match.params.name}</h1>}
-          />
-          
-        </Switch>
         
-        <Footer />;
+        <div className="mainContent">
+          <Switch>
+          
+            <Route exact path="/" component={Home} />
+            <Route
+              path="/wines"
+              render={(props) => (
+                <WineList {...props} wines={this.state.database} />
+              )}
+            />
+            <Route
+              exact
+              path="/countries"
+              render={(props) => (
+                <Countries {...props} countries={this.state.countries} />
+              )}
+            />
+            <Route
+              path="/countries/:name"
+              render={(props) => (
+                <SelectedCountry {...props} wines={this.state.database} />
+              )}
+            />
+            <Route
+              exact
+              path="/grapes"
+              render={(props) => (
+                <Grapes {...props} grapes={this.state.grapes} />
+              )}
+            />
+            <Route
+              path="/grapes/:name"
+              render={(props) => (
+                <SelectedGrapes {...props} wines={this.state.database} />
+              )}
+            />
+          </Switch>
+          <Search filtered={this.filterWine} filteredWine={this.state.filtered}/>
+        </div>
+        <Footer />
       </div>
     );
   }

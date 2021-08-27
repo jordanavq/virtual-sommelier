@@ -4,11 +4,16 @@ import GrapesCard from "../Card/GrapesCard";
 class WineList extends Component {
   render() {
     return (
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {this.props.wines.map((wine) => (
-          <GrapesCard {...wine} />
-        ))}
-      </div>
+      <>
+        <h1>All Wines</h1>
+        <div className="row">
+          {this.props.wines.map((wine) => (
+            <div className="col-3">
+              <GrapesCard {...wine} />
+            </div>
+          ))}
+        </div>
+      </>
     );
   }
 }
